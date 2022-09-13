@@ -7,7 +7,7 @@ In the Lamba, we have business logic to query two different API endpoints and co
 This project has been generated using the `aws-nodejs-typescript` template from the [Serverless framework](https://www.serverless.com/).
 
 ### Project structure
-
+```
 .
 ├── serverless
 │   └── functions               # Lambda configuration and source code folder 
