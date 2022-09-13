@@ -32,7 +32,7 @@ export const handler = async (event: APIGatewayProxyEvent) => {
     }
 
     const deals = await Axios.get(
-      "https://www.cheapshark.com/api/1.0/deals?upperPrice=15&pageSize=5"
+      "https://www.cheapshark.com/api/1.0/deals?upperPrice=25"
     );
 
     const currencyData = await Axios.get(
@@ -59,7 +59,7 @@ export const handler = async (event: APIGatewayProxyEvent) => {
 
         salePrice: +salePrice * currencyConversion,
         normalPrice: +normalPrice * currencyConversion,
-        savings: +savings * currencyConversion,
+        savingsPercent: savings,
 
         releaseDate: new Date(releaseDate * 1000).toDateString(),
       };
