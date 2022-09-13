@@ -3,6 +3,16 @@ import Axios from "axios";
 
 import { formatJSONResponse } from "@libs/apiGateway";
 
+type Deal = {
+  title: string;
+  storeID: string;
+  salePrice: string;
+  normalPrice: string;
+  savings: string;
+  steamRatingPercent: string;
+  releaseDate: number;
+};
+
 export const handler = async (event: APIGatewayProxyEvent) => {
   try {
     // url/gameDeals?currency=usd
@@ -31,7 +41,7 @@ export const handler = async (event: APIGatewayProxyEvent) => {
 
     const currencyConversion = currencyData.data[currency];
 
-    const repriceDeals = deals.data.map((deal) => {
+    const repriceDeals = deals.data.map((deal: Deal) => {
       const {
         title,
         storeID,
@@ -47,9 +57,9 @@ export const handler = async (event: APIGatewayProxyEvent) => {
         storeID,
         steamRatingPercent,
 
-        salePrice: salePrice * currencyConversion,
-        normalPrice: normalPrice * currencyConversion,
-        savings: savings * currencyConversion,
+        salePrice: +salePrice * currencyConversion,
+        normalPrice: +normalPrice * currencyConversion,
+        savings: +savings * currencyConversion,
 
         releaseDate: new Date(releaseDate * 1000).toDateString(),
       };
