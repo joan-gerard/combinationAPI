@@ -16,9 +16,6 @@ type Deal = {
 
 export const handler = async (event: APIGatewayProxyEvent) => {
   try {
-    // url/gameDeals?currency=usd
-
-    // if !queryStringParameters, then pass {}
     const { queryStringParameters = {} } = event;
 
     const { currency } = queryStringParameters;
@@ -69,7 +66,6 @@ export const handler = async (event: APIGatewayProxyEvent) => {
     });
 
     return formatJSONResponse({
-      // default 200 is set in the function
       data: repriceDeals,
     });
   } catch (error) {
@@ -82,5 +78,3 @@ export const handler = async (event: APIGatewayProxyEvent) => {
     });
   }
 };
-
-// This is my lambda because that is the code that is going to be run when users check deals
