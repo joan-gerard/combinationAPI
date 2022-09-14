@@ -18,4 +18,4 @@ const functions: AWS["functions"] = {
 
 export default functions;
 
-// line 5 -> look inside index, find the handler function and call it anytime there is a lamda called
+// line 6 -> look inside index, find the handler function and call it anytime there is a lambda called

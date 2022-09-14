@@ -11,6 +11,7 @@ type Deal = {
   savings: string;
   steamRatingPercent: string;
   releaseDate: number;
+  thumb: string;
 };
 
 export const handler = async (event: APIGatewayProxyEvent) => {
@@ -50,12 +51,14 @@ export const handler = async (event: APIGatewayProxyEvent) => {
         savings,
         steamRatingPercent,
         releaseDate,
+        thumb,
       } = deal;
 
       return {
         title,
         storeID,
         steamRatingPercent,
+        thumb,
 
         salePrice: +salePrice * currencyConversion,
         normalPrice: +normalPrice * currencyConversion,
