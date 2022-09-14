@@ -8,6 +8,15 @@ The final endpoint allows users to find game deals and convert price to their ch
 
 This project has been generated using the `aws-nodejs-typescript` template from the [Serverless framework](https://www.serverless.com/).
 
+### The Endpoint
+
+```
+https://npngw1v899.execute-api.eu-central-1.amazonaws.com/gameDeals
+
+Example:
+https://npngw1v899.execute-api.eu-central-1.amazonaws.com/gameDeals?currency=sek
+```
+
 ### Project structure
 ```
 .
