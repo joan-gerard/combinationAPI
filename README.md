@@ -1,8 +1,10 @@
 # Combination API
 
-We have created and deployed an API Gateway configuration, which then points to a Lamda.
+We have created and deployed an API Gateway configuration, which then points to a Lambda.
 
 In the Lamba, we have business logic to query two different API endpoints and combine the data.
+
+The final endpoint allows users to find game deals and convert price to their chosen currency.
 
 This project has been generated using the `aws-nodejs-typescript` template from the [Serverless framework](https://www.serverless.com/).
 
