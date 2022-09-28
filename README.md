@@ -1,4 +1,4 @@
-# Combination API
+# Combination API - AWS Serverless
 
 We have created and deployed an API Gateway configuration, which then points to a Lambda.
 
