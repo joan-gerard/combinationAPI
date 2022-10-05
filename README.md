@@ -23,7 +23,7 @@ https://npngw1v899.execute-api.eu-central-1.amazonaws.com/gameDeals?currency=sek
 ```
 .
 ├── serverless
-│   └── functions               # Lambda configuration and source code folder 
+│   └── functions.ts            # function definitions 
 ├── src
 │   ├── functions               # Lambda configuration and source code folder 
 │   │   └── combinationAPI
